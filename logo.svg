@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 190" width="660" height="190">
+  <!-- Orange outer chevron -->
+  <path d="M 15 15 L 140 15 L 140 45 L 45 45 L 45 155 L 15 155 Z" fill="#F39C12"/>
+  <!-- Deep Blue inner chevron -->
+  <path d="M 50 48 L 170 48 L 170 78 L 80 78 L 80 185 L 50 185 Z" fill="#2B3990"/>
+  <!-- Text: KOLEJ KOMUNITI -->
+  <text x="185" y="102" font-family="'Inter', 'Arial Black', 'Helvetica Neue', sans-serif" font-weight="900" font-size="40" fill="#000000" letter-spacing="-0.5">KOLEJ KOMUNITI</text>
+  <!-- Text: SUNGAI PETANI -->
+  <text x="188" y="160" font-family="'Inter', 'Arial', 'Helvetica Neue', sans-serif" font-weight="700" font-size="30" fill="#000000" letter-spacing="7.5">SUNGAI PETANI</text>
+</svg>
