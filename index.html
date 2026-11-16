@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sistem eAmanah KKSP - Kolej Komuniti Sungai Petani</title>
-    <meta name="description" content="Sistem eAmanah KKSP - Pengurusan Akaun Amanah Moden & Interaktif Kolej Komuniti Sungai Petani" />
+    <title>Sistem e-Amanah KKSP - Kolej Komuniti Sungai Petani</title>
+    <meta name="description" content="Sistem e-Amanah KKSP - Pengurusan Akaun Amanah Moden & Interaktif Kolej Komuniti Sungai Petani" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -567,6 +567,85 @@ body {
 .transition { transition-property: all; transition-duration: 150ms; }
 .backdrop-blur-sm { backdrop-filter: blur(4px); }
 
+/* =========================================================================
+   UNIVERSAL CONTRAST GUARD: No White Text on White/Light Backgrounds
+   ========================================================================= */
+
+:root, html, body, input, select, textarea {
+  color-scheme: light !important;
+}
+
+/* Default application text is solid dark */
+body, main, #app {
+  color: #0f172a !important;
+}
+
+/* Any white/light background container MUST default its text to dark/black */
+.bg-white,
+.bg-slate-50,
+.bg-slate-100,
+.bg-gray-50,
+.bg-gray-100 {
+  color: #0f172a !important;
+}
+
+/* All inputs, textareas, selects MUST always display solid black text */
+input,
+select,
+textarea,
+input:focus,
+select:focus,
+textarea:focus,
+input:disabled,
+select:disabled,
+textarea:disabled,
+input[readonly],
+textarea[readonly] {
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+  background-color: #ffffff;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #64748b !important;
+  -webkit-text-fill-color: #64748b !important;
+}
+
+/* Force dark text for buttons with light/white backgrounds */
+button.bg-white,
+button.bg-slate-50,
+button.bg-slate-100,
+button.bg-slate-200,
+button.bg-amber-400 {
+  color: #000000 !important;
+}
+
+/* Table cells on light background */
+.inst-table td,
+.inst-table th {
+  color: #0f172a !important;
+}
+
+/* Prevent accidental white-on-white text */
+.bg-white.text-white,
+.bg-slate-50.text-white,
+.bg-slate-100.text-white,
+.bg-white > .text-white:not([class*="bg-slate-9"]):not([class*="bg-slate-8"]):not([class*="bg-blue"]):not([class*="bg-purple"]):not([class*="bg-emerald"]):not([class*="bg-rose"]):not([class*="bg-teal"]):not([class*="bg-indigo"]),
+.bg-slate-50 > .text-white:not([class*="bg-slate-9"]):not([class*="bg-slate-8"]):not([class*="bg-blue"]):not([class*="bg-purple"]):not([class*="bg-emerald"]):not([class*="bg-rose"]):not([class*="bg-teal"]):not([class*="bg-indigo"]),
+.bg-slate-100 > .text-white:not([class*="bg-slate-9"]):not([class*="bg-slate-8"]):not([class*="bg-blue"]):not([class*="bg-purple"]):not([class*="bg-emerald"]):not([class*="bg-rose"]):not([class*="bg-teal"]):not([class*="bg-indigo"]) {
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+}
+
+/* Printable forms and preview areas */
+#single-invoice-print,
+#single-quotation-print,
+#single-asset-print,
+#single-asset-print-form {
+  color: #000000 !important;
+}
+
 </style>
 
     <!-- Firebase SDK Compat -->
@@ -591,7 +670,9 @@ body {
 
 
 
-    <script type="module" crossorigin src="./index.js?v=2026_v25"></script>
+
+
+    <script type="module" crossorigin src="./index.js?v=2026_v27"></script>
   </head>
   <body class="bg-slate-100 text-slate-900 antialiased selection:bg-blue-600 selection:text-white">
     <div id="app"></div>
