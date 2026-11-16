@@ -152,7 +152,7 @@ var QAe=Object.defineProperty;var GAe=(da,yA,ro)=>yA in da?QAe(da,yA,{enumerable
                 <p class="text-[11px] text-slate-500">Semua data sebutharga, invois, pendapatan & perbelanjaan diselaraskan secara masa-nyata (*real-time*) dengan peranti lain.</p>
                 
                 <div class="pt-2 flex flex-wrap items-center justify-center gap-2">
-                  <button onclick="window.forceSyncNow()" class="px-4 py-2 bg-teal-700 hover:bg-teal-800 text-white font-bold rounded-xl shadow-sm transition flex items-center gap-1.5">
+                  <button onclick="window.forceSyncNow()" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow-sm transition flex items-center gap-1.5">
                     <span>🔄</span> Selaras Data Awan Sekarang
                   </button>
                   <button onclick="window.handleFirebaseLogout()" class="px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white font-bold rounded-xl shadow-sm transition flex items-center gap-1.5">
@@ -183,7 +183,7 @@ var QAe=Object.defineProperty;var GAe=(da,yA,ro)=>yA in da?QAe(da,yA,{enumerable
                 </div>
 
                 <div class="flex items-center gap-2 pt-2">
-                  <button type="button" onclick="window.handleFirebaseLogin()" class="flex-1 py-2.5 bg-teal-700 hover:bg-teal-800 text-white font-extrabold rounded-xl shadow-md transition flex items-center justify-center gap-1.5 cursor-pointer">
+                  <button type="button" onclick="window.handleFirebaseLogin()" class="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-xl shadow-md transition flex items-center justify-center gap-1.5 cursor-pointer">
                     <span>➜]</span> Log Masuk Awan
                   </button>
 
@@ -273,22 +273,22 @@ var QAe=Object.defineProperty;var GAe=(da,yA,ro)=>yA in da?QAe(da,yA,{enumerable
       </div>
 
       <!-- Alert Center Banner -->
-      <div class="bg-slate-900 text-white p-4 rounded-2xl shadow-md border border-slate-800 flex flex-wrap items-center justify-between gap-4">
+      <div class="bg-amber-50 text-slate-900 p-4 rounded-2xl shadow-sm border border-amber-200 flex flex-wrap items-center justify-between gap-4">
         <div class="flex items-center gap-3">
-          <span class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">🔔</span>
-          <h3 class="text-sm font-bold tracking-wide">ALERT CENTER & TUKARAN PERHATIAN:</h3>
+          <span class="w-8 h-8 rounded-full bg-amber-200 text-amber-900 flex items-center justify-center font-bold">🔔</span>
+          <h3 class="text-sm font-extrabold text-amber-950 tracking-wide">ALERT CENTER & TINDAKAN PERHATIAN:</h3>
         </div>
         <div class="flex flex-wrap items-center gap-2 text-xs">
-          ${O.totalIssues>0?`<a href="#data_quality" class="px-3 py-1.5 rounded-lg bg-rose-500/20 text-rose-300 border border-rose-500/40 hover:bg-rose-500/30 transition font-medium flex items-center gap-1">
+          ${O.totalIssues>0?`<a href="#data_quality" class="px-3 py-1.5 rounded-lg bg-rose-100 text-rose-900 border border-rose-300 hover:bg-rose-200 transition font-bold flex items-center gap-1">
                   <span>⚠</span> ${O.totalIssues} Isu Kualiti Data
-                </a>`:'<span class="px-3 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-medium">✓ Tiada Isu Kualiti Data</span>'}
-          ${y>0?`<a href="#invoices" class="px-3 py-1.5 rounded-lg bg-rose-500/20 text-rose-300 border border-rose-500/40 hover:bg-rose-500/30 transition font-medium">
+                </a>`:'<span class="px-3 py-1.5 rounded-lg bg-emerald-100 text-emerald-900 border border-emerald-300 font-bold">✓ Tiada Isu Kualiti Data</span>'}
+          ${y>0?`<a href="#invoices" class="px-3 py-1.5 rounded-lg bg-rose-100 text-rose-900 border border-rose-300 hover:bg-rose-200 transition font-bold">
                   🚨 ${y} Invois Overdue
                 </a>`:""}
-          ${P>0?`<a href="#inventory" class="px-3 py-1.5 rounded-lg bg-amber-500/20 text-amber-300 border border-amber-500/40 hover:bg-amber-500/30 transition font-medium">
+          ${P>0?`<a href="#inventory" class="px-3 py-1.5 rounded-lg bg-amber-100 text-amber-900 border border-amber-300 hover:bg-amber-200 transition font-bold">
                   📦 ${P} Stok Syif Baki Kosong
                 </a>`:""}
-          ${m>0?`<a href="#claims" class="px-3 py-1.5 rounded-lg bg-blue-500/20 text-blue-300 border border-blue-500/40 hover:bg-blue-500/30 transition font-medium">
+          ${m>0?`<a href="#claims" class="px-3 py-1.5 rounded-lg bg-blue-100 text-blue-900 border border-blue-300 hover:bg-blue-200 transition font-bold">
                   🎓 ${m} Tuntutan Pending
                 </a>`:""}
         </div>
@@ -333,14 +333,14 @@ var QAe=Object.defineProperty;var GAe=(da,yA,ro)=>yA in da?QAe(da,yA,{enumerable
         </div>
 
         <!-- Baki Net Terkini -->
-        <div class="bg-gradient-to-br from-blue-900 to-indigo-900 text-white p-5 rounded-2xl shadow-lg flex flex-col justify-between">
-          <div class="flex items-center justify-between opacity-80">
-            <span class="text-xs font-bold uppercase tracking-wider">Baki Bersih Terkini</span>
-            <span class="p-2 rounded-xl bg-white/10 text-white text-sm">💰</span>
+        <div class="bg-white p-5 rounded-2xl border-2 border-blue-600 shadow-sm flex flex-col justify-between text-slate-900">
+          <div class="flex items-center justify-between text-blue-700">
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-600">Baki Bersih Terkini</span>
+            <span class="p-2 rounded-xl bg-blue-50 text-blue-700 text-sm">💰</span>
           </div>
           <div class="mt-3">
-            <h4 class="text-2xl font-extrabold tracking-tight">${ut(p)}</h4>
-            <p class="text-[11px] opacity-80 font-medium mt-1">
+            <h4 class="text-2xl font-extrabold text-blue-950 tracking-tight">${ut(p)}</h4>
+            <p class="text-[11px] text-slate-600 font-medium mt-1">
               Method: Baki + Masuk - Keluar ${g?"(Tuntutan Termasuk)":"- Tuntutan"}
             </p>
           </div>
@@ -441,23 +441,23 @@ var QAe=Object.defineProperty;var GAe=(da,yA,ro)=>yA in da?QAe(da,yA,{enumerable
       </div>
 
       <!-- Smart Financial Insights Box -->
-      <div class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white p-6 rounded-2xl shadow-lg border border-slate-800">
+      <div class="bg-white text-slate-900 p-6 rounded-2xl shadow-sm border border-slate-200">
         <div class="flex items-center gap-2 mb-3">
           <span class="text-lg">💡</span>
-          <h3 class="text-base font-extrabold tracking-tight">ANALISIS & INSIGHT KEWANGAAN PINTAR (FINANCIAL INSIGHTS)</h3>
+          <h3 class="text-base font-extrabold text-slate-900 tracking-tight">ANALISIS & INSIGHT KEWANGAN PINTAR (FINANCIAL INSIGHTS)</h3>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xs">
-          <div class="bg-white/10 p-3.5 rounded-xl backdrop-blur-sm border border-white/10">
-            <p class="font-bold text-amber-300 mb-1">📈 Trend Pendapatan</p>
-            <p class="opacity-90">Bulan Jun merekodkan pendapatan tertinggi sebanyak <span class="font-bold text-emerald-400">${ut(7410)}</span> disumbangkan oleh yuran latihan dan program komuniti.</p>
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+            <p class="font-bold text-amber-800 mb-1">📈 Trend Pendapatan</p>
+            <p class="text-slate-800 font-medium leading-relaxed">Bulan Jun merekodkan pendapatan tertinggi sebanyak <span class="font-bold text-emerald-800">${ut(7410)}</span> disumbangkan oleh yuran latihan dan program komuniti.</p>
           </div>
-          <div class="bg-white/10 p-3.5 rounded-xl backdrop-blur-sm border border-white/10">
-            <p class="font-bold text-blue-300 mb-1">📋 Pipeline Sebutharga</p>
-            <p class="opacity-90">Nilai sebutharga aktif kini berdiri pada <span class="font-bold text-purple-300">${ut(d)}</span> bagi 16 program yang telah dipohon.</p>
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+            <p class="font-bold text-blue-800 mb-1">📋 Pipeline Sebutharga</p>
+            <p class="text-slate-800 font-medium leading-relaxed">Nilai sebutharga aktif kini berdiri pada <span class="font-bold text-purple-800">${ut(d)}</span> bagi 16 program yang telah dipohon.</p>
           </div>
-          <div class="bg-white/10 p-3.5 rounded-xl backdrop-blur-sm border border-white/10">
-            <p class="font-bold text-rose-300 mb-1">🛡️ Kawalan Risiko & Audit</p>
-            <p class="opacity-90">Dikesan <span class="font-bold text-rose-300">${O.totalIssues} isu data</span> (rekod perbelanjaan tanpa tarikh & perbezaan baki stok) yang perlu disahkan di modul Kualiti Data.</p>
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+            <p class="font-bold text-rose-800 mb-1">🛡️ Kawalan Risiko & Audit</p>
+            <p class="text-slate-800 font-medium leading-relaxed">Dikesan <span class="font-bold text-rose-800">${O.totalIssues} isu data</span> (rekod perbelanjaan tanpa tarikh & perbezaan baki stok) yang perlu disahkan di modul Kualiti Data.</p>
           </div>
         </div>
       </div>
@@ -1122,10 +1122,10 @@ var QAe=Object.defineProperty;var GAe=(da,yA,ro)=>yA in da?QAe(da,yA,{enumerable
             <div class="border border-slate-300 rounded-lg overflow-hidden">
               <table class="w-full text-left border-collapse">
                 <thead>
-                  <tr class="bg-slate-900 text-white font-bold border-b border-slate-900 text-xs">
-                    <th class="p-3 w-12 border-r border-slate-800 text-center">BIL</th>
-                    <th class="p-3 border-r border-slate-800">KETERANGAN / PROGRAM / TUNTUTAN</th>
-                    <th class="p-3 w-28 text-right">JUMLAH (RM)</th>
+                  <tr class="bg-slate-100 text-slate-900 font-extrabold border-b border-slate-300 text-xs">
+                    <th class="p-3 w-12 border-r border-slate-300 text-center text-slate-900 font-extrabold">BIL</th>
+                    <th class="p-3 border-r border-slate-300 text-slate-900 font-extrabold">KETERANGAN / PROGRAM / TUNTUTAN</th>
+                    <th class="p-3 w-28 text-right text-slate-900 font-extrabold">JUMLAH (RM)</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -1352,10 +1352,10 @@ var QAe=Object.defineProperty;var GAe=(da,yA,ro)=>yA in da?QAe(da,yA,{enumerable
             <div class="border border-slate-300 rounded-lg overflow-hidden">
               <table class="w-full text-left border-collapse">
                 <thead>
-                  <tr class="bg-slate-900 text-white font-bold border-b border-slate-900 text-xs">
-                    <th class="p-3 w-12 border-r border-slate-800 text-center">BIL</th>
-                    <th class="p-3 border-r border-slate-800">PERKARA / CADANGAN PROGRAM / SPESIFIKASI</th>
-                    <th class="p-3 w-28 text-right">JUMLAH (RM)</th>
+                  <tr class="bg-slate-100 text-slate-900 font-extrabold border-b border-slate-300 text-xs">
+                    <th class="p-3 w-12 border-r border-slate-300 text-center text-slate-900 font-extrabold">BIL</th>
+                    <th class="p-3 border-r border-slate-300 text-slate-900 font-extrabold">PERKARA / CADANGAN PROGRAM / SPESIFIKASI</th>
+                    <th class="p-3 w-28 text-right text-slate-900 font-extrabold">JUMLAH (RM)</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -1573,7 +1573,7 @@ var QAe=Object.defineProperty;var GAe=(da,yA,ro)=>yA in da?QAe(da,yA,{enumerable
           <span class="text-xs font-bold text-slate-700 bg-indigo-50 px-3.5 py-2.5 rounded-xl border border-indigo-200">
             Jumlah Nilai Aset: <span class="text-indigo-900 font-black text-sm">${ut(n)}</span>
           </span>
-          <button onclick="window.openLocationPicModal()" class="px-4 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold shadow-md transition flex items-center gap-1.5 border border-indigo-500 cursor-pointer" title="Tetapkan Pegawai Bertanggungjawab bagi setiap lokasi">
+          <button onclick="window.openLocationPicModal()" class="px-4 py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-bold shadow-md transition flex items-center gap-1.5 border border-slate-700 cursor-pointer" title="Tetapkan Pegawai Bertanggungjawab bagi setiap lokasi">
             <span>📍</span> Tetapan PIC Lokasi
           </button>
           <button id="btn-add-asset" class="px-5 py-2.5 bg-amber-400 hover:bg-amber-500 rounded-xl text-xs font-black shadow-md transition flex items-center gap-1.5 border-2 border-slate-900 cursor-pointer" style="color: #000000 !important; font-weight: 900 !important;">
@@ -1758,7 +1758,7 @@ var QAe=Object.defineProperty;var GAe=(da,yA,ro)=>yA in da?QAe(da,yA,{enumerable
           </div>
         </div>
       </form>
-    `,footerButtons:[{label:"Batal",className:"px-4 py-2 border rounded-lg text-slate-700",onClick:(n,a)=>a()},{label:t?"Kemaskini Rekod":"Simpan Aset",className:"px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-semibold shadow-md",onClick:async(n,a)=>{const i=document.getElementById("asset-form");if(!i.checkValidity()){i.reportValidity();return}const A=document.getElementById("ast-location").value.trim(),s=document.getElementById("ast-pic")?document.getElementById("ast-pic").value.trim():"",o=document.getElementById("ast-supplier")?document.getElementById("ast-supplier").value.trim():"",l={id:t?e.id:`AST-2026-${String((r.assets||[]).length+1).padStart(4,"0")}`,asset_name:document.getElementById("ast-name").value,asset_type:document.getElementById("ast-type").value,serial_no:document.getElementById("ast-serial").value,supplier:o||e&&e.supplier||"NZ ANTARES ENTERPRISE",location:A,pic:s||Bl(r,A),value:parseFloat(document.getElementById("ast-value").value)||0,acquisition_date:document.getElementById("ast-date").value,year:"2026",status:document.getElementById("ast-status").value};A&&s&&(r.settings||(r.settings={}),r.settings.location_pic_map||(r.settings.location_pic_map={}),r.settings.location_pic_map[A]=s),t?await Ao("Asset",l):await io("Asset",l),Pt(t?"✓ Rekod aset dikemaskini":"✓ Rekod pendaftaran aset berjaya disimpan"),a(),window.appRefreshUI?window.appRefreshUI():window.location.reload()}}]})}function YL(r){r.settings||(r.settings={}),r.settings.location_pic_map||(r.settings.location_pic_map={});const e=(r.assets||[]).filter(a=>a.record_status!=="DELETED"),t=Array.from(new Set(e.map(a=>a.location?a.location.trim():"").filter(Boolean))).sort(),n=`
+    `,footerButtons:[{label:"Batal",className:"px-4 py-2 border rounded-lg text-slate-700",onClick:(n,a)=>a()},{label:t?"Kemaskini Rekod":"Simpan Aset",className:"px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold shadow-md",onClick:async(n,a)=>{const i=document.getElementById("asset-form");if(!i.checkValidity()){i.reportValidity();return}const A=document.getElementById("ast-location").value.trim(),s=document.getElementById("ast-pic")?document.getElementById("ast-pic").value.trim():"",o=document.getElementById("ast-supplier")?document.getElementById("ast-supplier").value.trim():"",l={id:t?e.id:`AST-2026-${String((r.assets||[]).length+1).padStart(4,"0")}`,asset_name:document.getElementById("ast-name").value,asset_type:document.getElementById("ast-type").value,serial_no:document.getElementById("ast-serial").value,supplier:o||e&&e.supplier||"NZ ANTARES ENTERPRISE",location:A,pic:s||Bl(r,A),value:parseFloat(document.getElementById("ast-value").value)||0,acquisition_date:document.getElementById("ast-date").value,year:"2026",status:document.getElementById("ast-status").value};A&&s&&(r.settings||(r.settings={}),r.settings.location_pic_map||(r.settings.location_pic_map={}),r.settings.location_pic_map[A]=s),t?await Ao("Asset",l):await io("Asset",l),Pt(t?"✓ Rekod aset dikemaskini":"✓ Rekod pendaftaran aset berjaya disimpan"),a(),window.appRefreshUI?window.appRefreshUI():window.location.reload()}}]})}function YL(r){r.settings||(r.settings={}),r.settings.location_pic_map||(r.settings.location_pic_map={});const e=(r.assets||[]).filter(a=>a.record_status!=="DELETED"),t=Array.from(new Set(e.map(a=>a.location?a.location.trim():"").filter(Boolean))).sort(),n=`
     <div class="space-y-4">
       <div class="bg-indigo-50 border border-indigo-200 p-4 rounded-xl text-indigo-950">
         <p class="font-extrabold text-xs flex items-center gap-2">
@@ -1795,7 +1795,7 @@ var QAe=Object.defineProperty;var GAe=(da,yA,ro)=>yA in da?QAe(da,yA,{enumerable
         </table>
       </div>
     </div>
-  `;Mn({title:"📍 Tetapan PIC Mengikut Lokasi Aset",bodyHtml:n,footerButtons:[{label:"Batal",className:"px-4 py-2 border rounded-lg text-slate-700 font-semibold",onClick:(a,i)=>i()},{label:"💾 Simpan Tetapan PIC",className:"px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold shadow-md transition",onClick:async(a,i)=>{t.forEach((A,s)=>{const o=document.getElementById(`loc-pic-${s}`);if(o){const l=o.value.trim();l&&(r.settings.location_pic_map[A]=l,(r.assets||[]).forEach(c=>{c.location&&c.location.trim()===A&&(c.pic=l)}))}}),await ao(r),Pt("✓ Tetapan PIC lokasi berjaya disimpan dan dikemaskini pada aset!"),i(),window.appRefreshUI?window.appRefreshUI():window.location.reload()}}]})}function Tb(r,e){const t=e.asset_type==="Harta Modal",n=t?"DAFTAR HARTA MODAL":"DAFTAR ASET ALIH BERNILAI RENDAH",a=t?"KEW.PA-3":"KEW.PA-4",i=t?"AM 2.3 Lampiran A":"AM 2.3 Lampiran B",A=e.serial_no||e.id,s=e.pic||Bl(r,e.location)||"PENYELARAS ASET";return`
+  `;Mn({title:"📍 Tetapan PIC Mengikut Lokasi Aset",bodyHtml:n,footerButtons:[{label:"Batal",className:"px-4 py-2 border rounded-lg text-slate-700 font-semibold",onClick:(a,i)=>i()},{label:"💾 Simpan Tetapan PIC",className:"px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold shadow-md transition",onClick:async(a,i)=>{t.forEach((A,s)=>{const o=document.getElementById(`loc-pic-${s}`);if(o){const l=o.value.trim();l&&(r.settings.location_pic_map[A]=l,(r.assets||[]).forEach(c=>{c.location&&c.location.trim()===A&&(c.pic=l)}))}}),await ao(r),Pt("✓ Tetapan PIC lokasi berjaya disimpan dan dikemaskini pada aset!"),i(),window.appRefreshUI?window.appRefreshUI():window.location.reload()}}]})}function Tb(r,e){const t=e.asset_type==="Harta Modal",n=t?"DAFTAR HARTA MODAL":"DAFTAR ASET ALIH BERNILAI RENDAH",a=t?"KEW.PA-3":"KEW.PA-4",i=t?"AM 2.3 Lampiran A":"AM 2.3 Lampiran B",A=e.serial_no||e.id,s=e.pic||Bl(r,e.location)||"PENYELARAS ASET";return`
     <div id="single-asset-print-form" class="bg-white p-4 text-slate-900 font-serif text-[11px] leading-snug space-y-3">
       <!-- Top Header Line -->
       <div class="flex items-center justify-between border-b border-slate-900 pb-1 text-[10px]">
@@ -1969,7 +1969,7 @@ var QAe=Object.defineProperty;var GAe=(da,yA,ro)=>yA in da?QAe(da,yA,{enumerable
             ${Tb(r,n)}
           </div>
         </div>
-      `,footerButtons:[{label:"Tutup",className:"px-4 py-2 border rounded-lg text-slate-700 font-semibold",onClick:(A,s)=>s()},{label:`🖨️ Cetak ${i} Sekarang`,className:"px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold shadow-md transition flex items-center gap-1.5",onClick:()=>window.printSingleAssetForm(n.id)}]})},window.printSingleAssetForm=t=>{const n=(r.assets||[]).find(i=>i.id===t);if(!n)return;let a=document.getElementById("direct-print-container");a||(a=document.createElement("div"),a.id="direct-print-container",document.body.appendChild(a)),a.innerHTML=Tb(r,n),window.print(),setTimeout(()=>{a.innerHTML=""},1e3)},window.editAssetRecord=t=>{const n=(r.assets||[]).find(a=>a.id===t);n&&wc(r,n)},window.deleteAssetRecord=t=>{const n=(r.assets||[]).find(a=>a.id===t);n&&oo({recordId:n.id,description:n.asset_name,amount:ut(n.value),onConfirm:async()=>{await so("Asset",n.id),Pt("✓ Rekod pendaftaran aset dipadam"),window.appRefreshUI?window.appRefreshUI():window.location.reload()}})}}function JL(r){const e=qg(r);return`
+      `,footerButtons:[{label:"Tutup",className:"px-4 py-2 border rounded-lg text-slate-700 font-semibold",onClick:(A,s)=>s()},{label:`🖨️ Cetak ${i} Sekarang`,className:"px-5 py-2.5 bg-purple-700 hover:bg-purple-800 text-white rounded-xl font-bold shadow-md transition flex items-center gap-1.5",onClick:()=>window.printSingleAssetForm(n.id)}]})},window.printSingleAssetForm=t=>{const n=(r.assets||[]).find(i=>i.id===t);if(!n)return;let a=document.getElementById("direct-print-container");a||(a=document.createElement("div"),a.id="direct-print-container",document.body.appendChild(a)),a.innerHTML=Tb(r,n),window.print(),setTimeout(()=>{a.innerHTML=""},1e3)},window.editAssetRecord=t=>{const n=(r.assets||[]).find(a=>a.id===t);n&&wc(r,n)},window.deleteAssetRecord=t=>{const n=(r.assets||[]).find(a=>a.id===t);n&&oo({recordId:n.id,description:n.asset_name,amount:ut(n.value),onConfirm:async()=>{await so("Asset",n.id),Pt("✓ Rekod pendaftaran aset dipadam"),window.appRefreshUI?window.appRefreshUI():window.location.reload()}})}}function JL(r){const e=qg(r);return`
     <div class="space-y-6 animate-fade-in pb-10">
       <!-- Header -->
       <div class="flex items-center justify-between bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
@@ -2016,9 +2016,9 @@ var QAe=Object.defineProperty;var GAe=(da,yA,ro)=>yA in da?QAe(da,yA,{enumerable
 
       <!-- Section 1: Incomplete Expenses Table -->
       <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
-        <div class="p-4 bg-slate-900 text-white font-bold text-sm flex items-center justify-between">
+        <div class="p-4 bg-slate-100 text-slate-900 font-extrabold text-sm flex items-center justify-between border-b border-slate-200">
           <span>1. Rekod Perbelanjaan Tidak Lengkap (${e.incompleteExpenses.length})</span>
-          <span class="text-xs font-normal text-slate-400">Klik "Betulkan Data" untuk mengemaskini</span>
+          <span class="text-xs font-semibold text-slate-600">Klik "Betulkan Data" untuk mengemaskini</span>
         </div>
         <div class="overflow-x-auto">
           <table class="inst-table">
@@ -2056,9 +2056,9 @@ var QAe=Object.defineProperty;var GAe=(da,yA,ro)=>yA in da?QAe(da,yA,{enumerable
 
       <!-- Section 2: Stock Calculation Discrepancies -->
       <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
-        <div class="p-4 bg-slate-900 text-white font-bold text-sm flex items-center justify-between">
+        <div class="p-4 bg-slate-100 text-slate-900 font-extrabold text-sm flex items-center justify-between border-b border-slate-200">
           <span>2. Perbezaan Pengiraan Stok / Stock Discrepancies (${e.stockDiscrepancies.length})</span>
-          <span class="text-xs font-normal text-slate-400">Penyelarasan Baku (Keluaran vs Rekod Asal)</span>
+          <span class="text-xs font-semibold text-slate-600">Penyelarasan Baku (Keluaran vs Rekod Asal)</span>
         </div>
         <div class="overflow-x-auto">
           <table class="inst-table">
@@ -2463,13 +2463,13 @@ end`};e.events.push(["putFont",function(i){(function(A){var s=A.font,o=A.out,l=A
       <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-3.5 no-print">
         ${n.map(o=>{const l=t===o.id;return`
               <div
-                class="p-4 rounded-2xl border transition cursor-pointer flex items-center gap-3 ${l?"bg-slate-900 text-white border-slate-900 shadow-lg scale-[1.02] ring-2 ring-blue-500":"bg-white text-slate-900 border-slate-200 hover:border-blue-500 hover:shadow-md"}"
+                class="p-4 rounded-2xl border transition cursor-pointer flex items-center gap-3 ${l?"bg-blue-50 text-blue-950 border-2 border-blue-600 shadow-md scale-[1.02]":"bg-white text-slate-900 border-slate-200 hover:border-blue-400 hover:shadow-sm"}"
                 onclick="window.selectActiveReport('${o.id}')"
               >
-                <span class="text-2xl p-2.5 rounded-xl ${l?"bg-white/10 text-white":"bg-slate-100"}">${o.icon}</span>
+                <span class="text-2xl p-2.5 rounded-xl ${l?"bg-blue-600 text-white":"bg-slate-100 text-slate-800"}">${o.icon}</span>
                 <div>
-                  <h4 class="text-xs font-bold tracking-wide ${l?"text-white":"text-slate-900"}">${o.title}</h4>
-                  <p class="text-[10px] mt-0.5 ${l?"text-slate-300":"text-slate-500"}">${o.desc}</p>
+                  <h4 class="text-xs font-extrabold tracking-wide ${l?"text-blue-950":"text-slate-900"}">${o.title}</h4>
+                  <p class="text-[10px] mt-0.5 font-medium ${l?"text-blue-800":"text-slate-600"}">${o.desc}</p>
                 </div>
               </div>
             `}).join("")}
@@ -2770,14 +2770,14 @@ end`};e.events.push(["putFont",function(i){(function(A){var s=A.font,o=A.out,l=A
             </button>
           </div>
 
-          <div class="bg-slate-900 text-white p-6 rounded-2xl shadow-sm space-y-3 text-xs">
-            <h4 class="font-bold text-amber-400">📋 Panduan Pemasangan Apps Script:</h4>
-            <ol class="list-decimal pl-4 space-y-2 opacity-90">
+          <div class="bg-slate-50 text-slate-900 p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3 text-xs">
+            <h4 class="font-extrabold text-slate-900">📋 Panduan Pemasangan Apps Script:</h4>
+            <ol class="list-decimal pl-4 space-y-2 text-slate-800 font-medium">
               <li>Buka Google Spreadsheet Akaun Amanah.</li>
-              <li>Klik <span class="font-bold text-white">Extensions > Apps Script</span>.</li>
-              <li>Tampal kod daripada fail <code class="bg-slate-800 px-1 rounded">backend/Code.gs</code>.</li>
-              <li>Klik <span class="font-bold text-white">Deploy > New Deployment > Web App</span>.</li>
-              <li>Tetapkan akses kepada <span class="font-bold text-emerald-400">Anyone</span>.</li>
+              <li>Klik <span class="font-bold text-slate-900">Extensions > Apps Script</span>.</li>
+              <li>Tampal kod daripada fail <code class="bg-slate-200 text-slate-900 px-1 rounded font-bold">backend/Code.gs</code>.</li>
+              <li>Klik <span class="font-bold text-slate-900">Deploy > New Deployment > Web App</span>.</li>
+              <li>Tetapkan akses kepada <span class="font-bold text-emerald-800">Anyone</span>.</li>
               <li>Salin Web App URL dan tampal di borang tetapan di sebelah.</li>
             </ol>
           </div>
