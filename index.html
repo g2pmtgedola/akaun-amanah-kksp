@@ -624,19 +624,19 @@ body {
 }
 
 /* Default application text is solid dark */
-body, main, #app {
-  color: #0f172a !important;
+body, main {
+  color: #0f172a;
 }
 
 /* Any white/light background container MUST default its text to dark/black */
-.bg-white,
-.bg-slate-50,
-.bg-slate-100,
-.bg-slate-200,
-.bg-gray-50,
-.bg-gray-100,
-.bg-gray-200 {
-  color: #0f172a !important;
+:not(aside).bg-white,
+:not(aside).bg-slate-50,
+:not(aside).bg-slate-100,
+:not(aside).bg-slate-200,
+:not(aside).bg-gray-50,
+:not(aside).bg-gray-100,
+:not(aside).bg-gray-200 {
+  color: #0f172a;
 }
 
 /* Force dark text for all text nodes inside white/light containers unless it has a dark bg */
@@ -706,6 +706,53 @@ button.bg-amber-400 {
   color: #000000 !important;
 }
 
+/* =========================================================================
+   SIDEBAR STYLING: Guaranteed Bright White Text on Dark Navy Background
+   ========================================================================= */
+aside,
+aside.bg-slate-900 {
+  background-color: #0f172a !important;
+  color: #ffffff !important;
+}
+
+aside a,
+aside nav a,
+aside nav a span,
+aside nav a div,
+aside p,
+aside h1,
+aside h2,
+aside h3 {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+aside a:hover,
+aside nav a:hover {
+  background-color: #1e293b !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+aside a.bg-blue-600,
+aside a[class*="bg-blue-600"] {
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+aside a.bg-blue-600 span,
+aside a.bg-blue-600 div {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+aside .text-slate-400,
+aside .text-slate-500 {
+  color: #cbd5e1 !important;
+  -webkit-text-fill-color: #cbd5e1 !important;
+}
+
 </style>
 
     <!-- Firebase SDK Compat -->
@@ -733,7 +780,8 @@ button.bg-amber-400 {
 
 
 
-    <script type="module" crossorigin src="./index.js?v=2026_v28"></script>
+
+    <script type="module" crossorigin src="./index.js?v=2026_v29"></script>
   </head>
   <body class="bg-slate-100 text-slate-900 antialiased selection:bg-blue-600 selection:text-white">
     <div id="app"></div>
